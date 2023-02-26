@@ -106,28 +106,3 @@ bool vcs_log() {
 
   return true;
 }
-
-bool vcs_otcat
-{
-  int snapshot_id = get_next_snapshot_id() - 2;
-  std::string snapshot_dir = ".archive/snapshot_" + std::to_string(snapshot_id);
-
-  std::unordered_map<std::string, std::string> file_hashes;
-
-  for (const auto &entry : fs::recursive_directory_iterator(".")) {
-    if (!fs::is_directory(entry.path())) {
-      copy_from_to(entry.path(), snapshot_dir / entry.path().filename());
-      file_hashes[entry.path().string().substr(2)] = compute_file_hash(entry.path());
-    }
-  }
-
-  auto hashes_log_file_path = fs::path(snapshot_dir) / std::string("hashes.log");
-  std::ofstream hashes_log_file(hashes_log_file_path);
-  for (const auto &[file, hash] : file_hashes) {
-    hashes_log_file << file << ' ' << hash << '\n';
-  }
-  hashes_log_file.close();
-
-  return true;	
-
-}

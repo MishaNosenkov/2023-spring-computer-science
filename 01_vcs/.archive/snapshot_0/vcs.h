@@ -7,7 +7,6 @@
 bool vcs_init();
 bool vcs_commit(const std::string& message);
 bool vcs_log();
-bool vcs_otcat();
 
 std::unordered_map<std::string, std::string> create_snapshot();
 

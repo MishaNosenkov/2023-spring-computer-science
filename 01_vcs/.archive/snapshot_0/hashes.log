@@ -1,0 +1,14 @@
+vcs.layout 3091d6fd8448811d
+CMakeLists.txt d13d7d3d1a2d9926
+src\vcs.o 5716cf4f1ebbe9d0
+README.md 31c086ec43c46e33
+src\cli.cpp a7cadba5057a01c3
+src\cli.h d6897a7197620f81
+src\cli.o d1e348ff81483bb2
+Makefile.win 05875cb68ea6f122
+vcs.exe d1dab3757ff40456
+src\main.cpp 4d3a44cdd4377af9
+src\vcs.cpp 66f32dcde2ad45b2
+src\main.o 2f61fbac3b433f50
+src\vcs.h 9c989f53263911a8
+vcs.dev 716aba493ba07bac

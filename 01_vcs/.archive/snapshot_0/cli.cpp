@@ -48,15 +48,4 @@ bool handle_log_command(const std::vector<std::string>& args) {
   vcs_log();
 
   return true;
-
-}
-
-bool handle_otcat_command(const std::vector<std::string>& args)
-{
-	if (args.empty()) {
-    std::cerr << "Error: commit command requires a message argument." << std::endl;
-    return false;
-  }
-//	vcs_otcat();
-  return true;
 }
